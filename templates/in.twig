@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Tutor input</title>
+</head>
+
+<body>
+    <form method="POST" action="/out">
+        {% for arg in input %}
+            <div style="margin-bottom: 20px;">
+                <label>{{ arg.label }}</label><br />
+                <input type="{{ name }}" name="{{ arg.name }}" />
+            </div>
+        {% endfor %}
+        <input type="submit" value="Process" />
+    </form>
+</body>
+
+</html>
